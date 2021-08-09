@@ -24,7 +24,7 @@ public class EnterLocationInformation implements Task {
         actor.attemptsTo(
                 Click.on(UTestLocationInformationLogUpPage.CITY),
                 Clear.field(UTestLocationInformationLogUpPage.CITY),
-                SendKeys.of("Popayán").into(UTestLocationInformationLogUpPage.CITY),
+                SendKeys.of("Popayan").into(UTestLocationInformationLogUpPage.CITY),
                 Hit.the(Keys.ARROW_DOWN).keyIn(UTestLocationInformationLogUpPage.CITY),
                 Hit.the(Keys.ENTER).keyIn(UTestLocationInformationLogUpPage.CITY),
                 Click.on(UTestLocationInformationLogUpPage.ZIP),
