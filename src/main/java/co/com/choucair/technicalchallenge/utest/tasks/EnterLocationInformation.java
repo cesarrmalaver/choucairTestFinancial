@@ -10,8 +10,10 @@ import net.serenitybdd.screenplay.actions.Clear;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.actions.SendKeys;
+import net.serenitybdd.screenplay.matchers.WebElementStateMatchers;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
-
+import org.openqa.selenium.WebElement;
 
 
 public class EnterLocationInformation implements Task {
@@ -32,6 +34,7 @@ public class EnterLocationInformation implements Task {
                 SendKeys.of("1930").into(UTestLocationInformationLogUpPage.ZIP),
 
                 Click.on(UTestLocationInformationLogUpPage.COUNTRY),
+                WaitUntil.the(UTestLocationInformationLogUpPage.COLOMBIA, WebElementStateMatchers.isVisible()),
                 Click.on(UTestLocationInformationLogUpPage.COLOMBIA),
                 Click.on(UTestLocationInformationLogUpPage.BUTTON_NEXT_DEVICE)
         );
